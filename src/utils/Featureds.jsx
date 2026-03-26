@@ -20,7 +20,7 @@ import React from 'react'
 
 const getData = featuredProducts
 
-const Featured = async () => {
+const Featureds = async () => {
   const featuredProducts = getData
   // const featuredProducts = featuredProducts()
 
@@ -65,4 +65,4 @@ const Featured = async () => {
   )
 }
 
-export default Featured
+export default Featureds

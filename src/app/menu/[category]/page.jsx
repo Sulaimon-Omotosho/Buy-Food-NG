@@ -1,26 +1,29 @@
-// import { pizzas } from '@/data'
+import { pizzas } from '@/data'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const API_URL =
-  process.env.NODE_ENV === 'development'
-    ? 'http:localhost:3000' // Development API URL
-    : 'https://buy-food-ng.vercel.app' // Production API URL
+// const API_URL =
+//   process.env.NODE_ENV === 'development'
+//     ? 'http:localhost:3000' // Development API URL
+//     : 'https://buy-food-ng.vercel.app' // Production API URL
 
-const getData = async (category) => {
-  const res = await fetch(`${API_URL}/api/products?cat=${category}`, {
-    cache: 'no-store',
-  })
+// const getData = async (category) => {
+//   const res = await fetch(`${API_URL}/api/products?cat=${category}`, {
+//     cache: 'no-store',
+//   })
 
-  if (!res.ok) {
-    throw new Error('Failed!')
-  }
-  return res.json()
-}
+//   if (!res.ok) {
+//     throw new Error('Failed!')
+//   }
+//   return res.json()
+// }
+
+const getData = pizzas
 
 const CategoryPage = async ({ params }) => {
-  const products = await getData(params.category)
+  // const products = await getData(params.category)
+  const products = getData
 
   return (
     <div
