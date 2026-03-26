@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 
 const CountDown = () => {
-  let targetDate = new Date(`11/10/2023`).getTime()
+  let targetDate = new Date(`28/04/2026`).getTime()
   const [timeLeft, setTimeLeft] = useState(targetDate - new Date().getTime())
 
   const formatTime = (time) => {
@@ -33,7 +33,8 @@ const CountDown = () => {
   return (
     <div>
       <span className='font-bold text-5xl text-yellow-300'>
-        {days}:{hours}:{minutes}:{seconds}
+        {/* {days}:{hours}:{minutes}:{seconds} */}
+        Unavailable
       </span>
     </div>
   )
